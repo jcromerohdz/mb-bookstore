@@ -71,4 +71,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## Author
 Christian Romero https://github.com/jcromerohdz
 
-## Development Branch
+## Milestone 1 basic project structre
