@@ -1,3 +1,28 @@
+# Bookstore
+## Project Specifications:
+ Magic-books Inc. is a fictional company based in Germany. They have requested your help to build the front-end of an application that will help them organize and manage their bookstore. They want it to be fast, dynamic and responsive to their actions and therefore you decided to build it with React & Redux.
+<br />
+
+You can find the original project specification [here](https://github.com/microverseinc/project-redux-bookstore/blob/master/README.md)
+
+![screenshot](./calculator.png)
+
+You can see the live version [here](https://magicianscalc.herokuapp.com/)
+
+
+
+## This project use the following tools
+- Node.js
+- React
+- React-DOM
+- React-Redux
+- Redux
+- React-Create-App
+- npm
+- Yarn
+- CSS
+- ES6
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -43,26 +68,5 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Author
+Christian Romero https://github.com/jcromerohdz
