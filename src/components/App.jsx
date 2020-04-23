@@ -5,7 +5,7 @@ const App = () => {
     <div>
       BookStore App
     </div>
-  )
-}
+  );
+};
 
 export default App;
