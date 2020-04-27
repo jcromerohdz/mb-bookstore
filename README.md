@@ -5,9 +5,9 @@
 
 You can find the original project specification [here](https://github.com/microverseinc/project-redux-bookstore/blob/master/README.md)
 
-![screenshot](./calculator.png)
+<!-- ![screenshot](./calculator.png) -->
 
-You can see the live version [here](https://magicianscalc.herokuapp.com/)
+You can see the live version [here](https://mb-bookstore.herokuapp.com/)
 
 
 
@@ -71,4 +71,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## Author
 Christian Romero https://github.com/jcromerohdz
 
-## Development Branch
+## Milestone 1 basic project structre .
