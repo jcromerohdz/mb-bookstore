@@ -1,23 +1,31 @@
 import React from 'react';
-import Book from 
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import Book from '../components/Book';
 
-const BooksList = () => {
+const BooksList = ({ books }) => {
   return (
     <div>
       <table>
         <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
+          <Book />
         </thead>
         <tbody>
-          <Book />
+          { books.map(book => <Book key={book.id} book={book} />) }
         </tbody>
       </table>
     </div>
   );
 };
 
-export default BooksList;
+BooksList.propTypes = {
+  books: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    category: PropTypes.string,
+  })).isRequired,
+};
+
+const mapStateToProps = state => ({ books: state.books });
+
+export default connect(mapStateToProps)(BooksList);
