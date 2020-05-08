@@ -9,6 +9,6 @@ const books = (state = [], action) => {
     default:
       return state;
   }
-}
+};
 
 export default books;
