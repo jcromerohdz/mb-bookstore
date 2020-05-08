@@ -8,23 +8,21 @@ const BooksList = ({ books }) => {
     <div>
       <table>
         <thead>
-          <Book />
+          <tr>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Category</th>
+          </tr>
         </thead>
         <tbody>
-          { books.map(book => <Book key={book.id} book={book} />) }
+          {books.length > 0 && books.map(book => <Book key={book.id} book={book} />)}
         </tbody>
       </table>
     </div>
   );
 };
 
-BooksList.propTypes = {
-  books: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string,
-    title: PropTypes.string,
-    category: PropTypes.string,
-  })).isRequired,
-};
+BooksList.propTypes = { books: PropTypes.instanceOf(Array).isRequired };
 
 const mapStateToProps = state => ({ books: state.books });
 
