@@ -2,97 +2,81 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
+import categories from '../data/categories';
 
-
-const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-
-class BookForm extends React.Component {
+class BooksForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       id: Math.floor(Math.random() * 1000),
       title: '',
-      category: categories[0]
+      category: categories[0],
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChage = (event) =>  {
-    if (event.target.name === 'title') {
+  handleChange(e) {
+    if (e.target.name === 'title') {
       this.setState({
-        title: event.target.value
+        title: e.target.value,
       });
-    } else if (event.target.name === 'category') {
+    } else if (e.target.name === 'category') {
       this.setState({
-        category: event.target.value
+        category: e.target.value,
       });
     }
-  };
+  }
 
-  handleSubmit = (event) => {
+  handleSubmit(e) {
     const { title } = this.state;
     const { createBook } = this.props;
-    event.preventDefault();
+    e.preventDefault();
     if (title) {
       createBook(this.state);
       this.reset();
     }
   }
 
-  reset = () =>{
+  reset() {
     this.setState({
       id: Math.ceil(Math.random() * 1000),
       title: '',
-      category: categories[0]
+      category: categories[0],
     });
   }
 
   render() {
     const { title, category } = this.state;
     return (
-      <div>
-        <form action="">
-          <input
-            type="text"
-            placeholder="Title"
-            name="title"
-            value={title}
-            onChange={this.handleChage}
-          />
-          <select
-            name="category"
-            id="cat"
-            value={category}
-            onChange={this.handleChage}
-          >
-            {categories.map(cat => (<option key={cat} value={cat}>{cat}</option>))}
-          </select>
-          <input type="submit" value="Save" />
-        </form>
-      </div>
+      <form onSubmit={this.handleSubmit}>
+        <h2>Title</h2>
+        <input
+          name="title"
+          type="text"
+          value={title}
+          onChange={this.handleChange}
+        />
+        <h2>Category</h2>
+        <select name="category" value={category} onChange={this.handleChange}>
+          {categories.map(category => (
+            <option key={category}>{category}</option>
+          ))}
+        </select>
+        <button type="submit">Submit</button>
+      </form>
     );
   }
 }
 
-// const BookForm = () => (
-//   <div>
-//     <form action="">
-//       <input type="text" placeholder="Title" />
-//       <select name="category" id="cat">
-//         {categories.map(cat => (<option key={cat} value={cat}>{cat}</option>))}
-//       </select>
-//       <input type="submit" value="Save" />
-//     </form>
-//   </div>
-// );
-
-BookForm.propTypes = {
+BooksForm.propTypes = {
   createBook: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = dispatch => ({
   createBook: book => {
     dispatch(createBook(book));
-  }
+  },
 });
 
-export default connect(null, mapDispatchToProps)(BookForm);
+export default connect(null, mapDispatchToProps)(BooksForm);

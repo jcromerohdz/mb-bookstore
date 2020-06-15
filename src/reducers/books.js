@@ -1,9 +1,11 @@
-import { CREATE_BOOK, REMOVE_BOOK } from '../actions';
+import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
 
-const books = (state = [], action) => {
+const bookReducer = (state = [], action) => {
   switch (action.type) {
     case CREATE_BOOK:
-      return [...state, action.id];
+      console.log([...state.books, action.book]);
+      console.log(action.book);
+      return [...state, action.book];
     case REMOVE_BOOK:
       return state.filter(book => book.id !== parseInt(action.id, 2));
     default:
@@ -11,4 +13,4 @@ const books = (state = [], action) => {
   }
 };
 
-export default books;
+export default bookReducer;
