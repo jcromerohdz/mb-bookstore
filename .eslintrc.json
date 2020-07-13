@@ -16,7 +16,7 @@
   "rules": {
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "import/no-unresolved": "off",
-    "jsx-a11y/img-uses-alt": "off",
+    "jsx-a11y/rule-name": 2,
     "no-shadow": "off",
     "arrow-parens": ["error", "as-needed"]
   }
