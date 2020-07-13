@@ -6,8 +6,6 @@ import { removeBook } from '../actions/index';
 
 const BookList = ({ books, removeBook }) => (
   <table>
-    // eslint-disable-next-line react/no-this-in-sfc
-    {console.log(books)}
     <thead>
       <tr>
         <th>Book ID</th>
