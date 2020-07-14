@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeBook } from '../actions/index';
 
-const BookList = ({ books, removeBook }) => (
+const BookList = (props) => (
   <table>
     <thead>
       <tr>
@@ -15,8 +15,8 @@ const BookList = ({ books, removeBook }) => (
       </tr>
     </thead>
     <tbody>
-      {books.map(book => (
-        <Book book={book} key={book.id} removeBook={removeBook} />
+      {props.books.map(book => (
+        <Book book={book} key={book.id} removeBook={props.removeBook} />
       ))}
     </tbody>
   </table>
