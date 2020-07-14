@@ -20,6 +20,7 @@ Book.propTypes = {
     title: PropTypes.string,
     category: PropTypes.string,
   }).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
 export default Book;
