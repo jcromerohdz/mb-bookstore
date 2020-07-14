@@ -24,7 +24,6 @@ const BookList = ({ books, removeBook }) => (
 
 BookList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
-  removeBook: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
