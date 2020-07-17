@@ -71,4 +71,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## Author
 Christian Romero H  https://github.com/jcromerohdz
 
-## Milestone 2 Components and Redux store
+## Milestone 4 Category Filter
