@@ -1,15 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import Book from '../components/Book';
-import { removeBook, changeFilter } from '../actions/index';
-import CategoryFilter from '../components/CategoryFilter';
+import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import Book from "../components/Book";
+import { removeBook, changeFilter } from "../actions/index";
+import CategoryFilter from "../components/CategoryFilter";
 
-import '../styles/bookList.css';
+import "../styles/bookList.css";
 
 const BookList = ({ books, filter, removeBook, changeFilter }) => {
-  const filteredBooks = (filter !== 'All') ? books.filter(book => book.category === filter) : books;
+  const filteredBooks =
+    filter !== "All" ? books.filter((book) => book.category === filter) : books;
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -25,7 +26,7 @@ const BookList = ({ books, filter, removeBook, changeFilter }) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon" />
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -43,22 +44,26 @@ const BookList = ({ books, filter, removeBook, changeFilter }) => {
             </li>
           </ul>
           <form className="form-inline my-2 my-lg-0">
-            <i className="fa fa-user-circle fa-3x" aria-hidden="true" id="user" />
+            <i
+              className="fa fa-user-circle fa-3x"
+              aria-hidden="true"
+              id="user"
+            />
           </form>
         </div>
       </nav>
 
-        <div className="container">
-          {filteredBooks.map((book) => (
-            <Book book={book} key={book.id} removeBook={removeBook} />
-          ))}
-        </div>
+      <div className="container">
+        {filteredBooks.map((book) => (
+          <Book book={book} key={book.id} removeBook={removeBook} />
+        ))}
+      </div>
     </div>
   );
 };
 
 BookList.defaultProps = {
-  filter: 'All',
+  filter: "All",
 };
 
 BookList.propTypes = {
@@ -68,16 +73,16 @@ BookList.propTypes = {
   changeFilter: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   books: state.books,
   filter: state.filter,
 });
 
-const mapDispatchToProps = dispatch => ({
-  removeBook: book => {
+const mapDispatchToProps = (dispatch) => ({
+  removeBook: (book) => {
     dispatch(removeBook(book));
   },
-  changeFilter: category => {
+  changeFilter: (category) => {
     dispatch(changeFilter(category));
   },
 });

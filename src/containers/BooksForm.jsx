@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { createBook } from "../actions/index";
-import categories from "../data/categories";
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { createBook } from '../actions/index';
+import categories from '../data/categories';
 
 import '../styles/form.css';
 
@@ -12,7 +12,7 @@ class BooksForm extends React.Component {
     super(props);
     this.state = {
       id: Math.floor(Math.random() * 1000),
-      title: "",
+      title: '',
       category: categories[0],
     };
 
@@ -21,11 +21,11 @@ class BooksForm extends React.Component {
   }
 
   handleChange(e) {
-    if (e.target.name === "title") {
+    if (e.target.name === 'title') {
       this.setState({
         title: e.target.value,
       });
-    } else if (e.target.name === "category") {
+    } else if (e.target.name === 'category') {
       this.setState({
         category: e.target.value,
       });
@@ -45,7 +45,7 @@ class BooksForm extends React.Component {
   reset() {
     this.setState({
       id: Math.ceil(Math.random() * 1000),
-      title: "",
+      title: '',
       category: categories[0],
     });
   }
@@ -84,7 +84,7 @@ class BooksForm extends React.Component {
               value={category}
               onChange={this.handleChange}
             >
-              {categories.map((category) => (
+              {categories.map(category => (
                 <option key={category}>{category}</option>
               ))}
             </select>
@@ -107,8 +107,8 @@ BooksForm.propTypes = {
   createBook: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  createBook: (book) => {
+const mapDispatchToProps = dispatch => ({
+  createBook: book => {
     dispatch(createBook(book));
   },
 });
