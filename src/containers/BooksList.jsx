@@ -6,7 +6,7 @@ import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
 
-import '../styles/nav.css';
+import '../styles/bookList.css';
 
 const BookList = ({ books, filter, removeBook, changeFilter }) => {
   const filteredBooks = (filter !== 'All') ? books.filter(book => book.category === filter) : books;
