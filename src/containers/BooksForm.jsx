@@ -57,9 +57,7 @@ class BooksForm extends React.Component {
         <hr />
         <div className="row">
           <div className="col-lg-6">
-            <label htmlFor="title">
-              <h4>ADD NEW BOOK</h4>
-            </label>
+            <h4>ADD NEW BOOK</h4>
           </div>
         </div>
         <form className="form-row" onSubmit={this.handleSubmit}>
@@ -74,9 +72,6 @@ class BooksForm extends React.Component {
             />
           </div>
           <div className="col-lg-3">
-            <label className="mr-sm-2 sr-only" htmlFor="inlineFormCustomSelect">
-              Preference
-            </label>
             <select
               className="custom-select mr-sm-2 form-control form-control-lg"
               id="inlineFormCustomSelect"

@@ -10,7 +10,7 @@ import '../styles/bookList.css';
 
 const BookList = ({ books, filter, removeBook, changeFilter }) => {
   const filteredBooks =
-    filter !== 'All' ? books.filter((book) => book.category === filter) : books;
+    filter !== 'All' ? books.filter(book => book.category === filter) : books;
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -63,7 +63,7 @@ const BookList = ({ books, filter, removeBook, changeFilter }) => {
 };
 
 BookList.defaultProps = {
-  filter: "All",
+  filter: 'All',
 };
 
 BookList.propTypes = {
