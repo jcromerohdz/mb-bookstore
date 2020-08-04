@@ -71,4 +71,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## Author
 Christian Romero H  https://github.com/jcromerohdz
 
-## Milestone 4 Category Filter
+## Milestone 5 Implementig Styles to the application
