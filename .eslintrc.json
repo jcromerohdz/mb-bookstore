@@ -21,5 +21,9 @@
     "jsx-a11y/img-has-alt": "off",
     "no-shadow": "off",
     "arrow-parens": ["error", "as-needed"]
-  }
+  },
+  "ignorePatterns": [
+    "dist/",
+    "build/"
+  ]
 }
