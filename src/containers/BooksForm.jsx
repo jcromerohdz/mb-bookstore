@@ -61,7 +61,7 @@ class BooksForm extends React.Component {
           </div>
         </div>
         <form className="form-row" onSubmit={this.handleSubmit}>
-          <div className="col-lg-6">
+          <div className="col-lg-6 col-sm-12 mt-3">
             <input
               className="form-control form-control-lg"
               type="text"
@@ -71,7 +71,7 @@ class BooksForm extends React.Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-sm-12 mt-3">
             <select
               className="custom-select mr-sm-2 form-control form-control-lg"
               id="inlineFormCustomSelect"
@@ -84,7 +84,7 @@ class BooksForm extends React.Component {
               ))}
             </select>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-sml-12 mt-3">
             <button type="submit" className="btn btn-primary btn-lg btn-block">
               SUBMIT
             </button>
