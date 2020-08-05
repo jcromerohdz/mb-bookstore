@@ -11,16 +11,10 @@ const Book = ({ book, removeBook }) => (
       <h3>{book.title}</h3>
       <a href="">Suzanne Collins</a>
       <br />
-      <span className="NoPiped">
-        <a href="">Comments</a>
-      </span>
       <span>
         <a href="#" onClick={() => removeBook(book)}>
           Remove
         </a>
-      </span>
-      <span>
-        <a href="">Edit</a>
       </span>
     </div>
     <div className="col-lg-7 col-md-12 col-xs-12">
