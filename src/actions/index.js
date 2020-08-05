@@ -1,13 +1,22 @@
-/* eslint-disable camelcase */
-export const CREATE_BOOK = 'CREATE_BOOK';
-export const REMOVE_BOOK = 'REMOVE_BOOK';
+const CREATE_BOOK = 'CREATE_BOOK';
+const REMOVE_BOOK = 'REMOVE_BOOK';
+const CHANGE_FILTER = 'CHANGE_FILTER';
 
-export const createBook = book => ({
+const createBook = book => ({
   type: CREATE_BOOK,
   book,
 });
 
-export const removeBook = book => ({
+const removeBook = book => ({
   type: REMOVE_BOOK,
   book,
 });
+
+const changeFilter = category => ({
+  type: CHANGE_FILTER,
+  category,
+});
+
+export {
+  CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER, createBook, removeBook, changeFilter,
+};

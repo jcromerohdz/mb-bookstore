@@ -69,6 +69,6 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Author
-Christian Romero https://github.com/jcromerohdz
+Christian Romero H  https://github.com/jcromerohdz
 
-## Milestone 2 Components and Redux store
+## Milestone 5 Implementig Styles to the application
